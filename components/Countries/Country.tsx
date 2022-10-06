@@ -25,7 +25,7 @@ function Country({ country }: CountryData) {
 					width={300}
 					height={200}
 					unoptimized
-					priority
+					loading='lazy'
 				/>
 			</figure>
 			<div className='p-4'>
