@@ -14,13 +14,13 @@ interface CountryData {
 }
 
 function Countries({ data }) {
-	const { region } = React.useContext(CountryContext)
+	const { country } = React.useContext(CountryContext)
 	const [searchedCountry, setSearchedCountry] = React.useState([])
 
 	React.useEffect(() => {
 		async function fetchCountry() {
 			const response = await fetch(
-				`https://restcountries.com/v3.1/name/${region}`
+				`https://restcountries.com/v3.1/name/${country}`
 			)
 			const data = await response.json()
 
@@ -29,7 +29,7 @@ function Countries({ data }) {
 			}
 		}
 		fetchCountry()
-	}, [region])
+	}, [country])
 
 	return (
 		<>

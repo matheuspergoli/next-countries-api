@@ -3,10 +3,10 @@ import { FaSearch as SearchIcon } from 'react-icons/fa'
 import { CountryContext } from '../../context/CountryContext'
 
 function Search() {
-	const { region, setRegion } = React.useContext(CountryContext)
+	const { country, setCountry } = React.useContext(CountryContext)
 
-	function changeRegion({ target }) {
-		setRegion(target.value)
+	function searchCountry({ target }) {
+		setCountry(target.value)
 	}
 
 	return (
@@ -16,8 +16,8 @@ function Search() {
 				<input
 					className='outline-none w-full'
 					type='text'
-					value={region}
-					onChange={changeRegion}
+					value={country}
+					onChange={searchCountry}
 					placeholder='Search for a country...'
 				/>
 			</div>
