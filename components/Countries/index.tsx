@@ -19,15 +19,13 @@ function Countries({ data }) {
 
 	React.useEffect(() => {
 		async function fetchCountry() {
-			if (region.length > 3) {
-				const response = await fetch(
-					`https://restcountries.com/v3.1/name/${region}`
-				)
-				const data = await response.json()
+			const response = await fetch(
+				`https://restcountries.com/v3.1/name/${region}`
+			)
+			const data = await response.json()
 
-				if (data.status !== 404) {
-					setSearchedCountry(data)
-				}
+			if (data.status !== 404) {
+				setSearchedCountry(data)
 			}
 		}
 		fetchCountry()
