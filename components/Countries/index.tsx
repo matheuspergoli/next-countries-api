@@ -35,7 +35,7 @@ function Countries({ data }) {
 
 	return (
 		<>
-			{searchedCountry && (
+			{searchedCountry.length > 0 && (
 				<section className='flex flex-wrap justify-evenly items-center gap-10 p-5'>
 					{searchedCountry.map((country: CountryData, index: number) => (
 						<Country key={index} country={country} />
