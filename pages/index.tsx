@@ -17,6 +17,10 @@ function Home({ data }) {
 		<>
 			<Head>
 				<title>Countries API</title>
+				<meta
+					name='description'
+					content='Next Countries API - Search for every country in our site, check information about your desired country, we provide all the information you will need.'
+				/>
 			</Head>
 			<Title />
 			<Search />
