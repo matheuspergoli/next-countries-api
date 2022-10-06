@@ -10,9 +10,9 @@ function Search() {
 	}
 
 	return (
-		<section className='m-5 p-4 rounded-md shadow-md'>
-			<div className='flex items-center gap-2'>
-				{<SearchIcon />}
+		<section className='m-5'>
+			<div className='flex items-center gap-2 p-4 max-w-xs rounded-md shadow-md border'>
+				<SearchIcon />
 				<input
 					className='outline-none w-full'
 					type='text'
