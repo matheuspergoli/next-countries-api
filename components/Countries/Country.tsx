@@ -15,16 +15,15 @@ function Country({ country }: CountryData) {
 	const src = country.flags.png
 
 	return (
-		<section className='w-64 shadow-md rounded-md border'>
+		<section className='w-country-card h-country-card shadow-md rounded-md border'>
 			<figure>
 				<Image
 					className='rounded-t-md'
 					loader={() => src}
 					src={src}
 					alt={`${country.name.common} Flag`}
-					width={100}
-					height={100}
-					layout='responsive'
+					width={300}
+					height={200}
 					unoptimized
 					priority
 				/>

@@ -5,7 +5,14 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}'
 	],
 	theme: {
-		extend: {}
+		extend: {
+			width: {
+				'country-card': '300px'
+			},
+			height: {
+				'country-card': '400px'
+			}
+		}
 	},
 	plugins: []
 }
