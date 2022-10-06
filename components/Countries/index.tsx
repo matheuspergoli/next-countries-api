@@ -24,7 +24,10 @@ function Countries({ data }) {
 					`https://restcountries.com/v3.1/name/${region}`
 				)
 				const data = await response.json()
-				setSearchedCountry(data)
+
+				if (data.status !== 404) {
+					setSearchedCountry(data)
+				}
 			}
 		}
 		fetchCountry()
@@ -32,12 +35,13 @@ function Countries({ data }) {
 
 	return (
 		<>
-			<section className='flex items-center justify-center'>
-				{searchedCountry &&
-					searchedCountry.map((country: CountryData, index: number) => (
+			{searchedCountry && (
+				<section className='flex flex-wrap justify-evenly items-center gap-10 p-5'>
+					{searchedCountry.map((country: CountryData, index: number) => (
 						<Country key={index} country={country} />
 					))}
-			</section>
+				</section>
+			)}
 			<main className='flex flex-wrap justify-evenly items-center gap-10 p-5'>
 				{data.map((country: CountryData, index: number) => (
 					<Country key={index} country={country} />
