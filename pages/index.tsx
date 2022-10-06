@@ -3,7 +3,7 @@ import Title from '../components/Title'
 import Countries from '../components/Countries'
 import Search from '../components/Search'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const response = await fetch('https://restcountries.com/v3.1/all')
 	const data = await response.json()
 
