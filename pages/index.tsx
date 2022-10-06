@@ -15,7 +15,7 @@ function Home({ data }) {
 	return (
 		<>
 			<Head>
-				<title>Home</title>
+				<title>Countries API</title>
 			</Head>
 			<Title />
 			<Countries data={data} />
