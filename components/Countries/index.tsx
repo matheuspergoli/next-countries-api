@@ -1,5 +1,6 @@
 import React from 'react'
 import Country from './Country'
+import { CountryContext } from '../../context/CountryContext'
 
 interface CountryData {
 	capital: []
@@ -10,6 +11,8 @@ interface CountryData {
 }
 
 function Countries({ data }) {
+	const { region } = React.useContext(CountryContext)
+
 	return (
 		<main className='flex flex-wrap justify-evenly items-center gap-10 p-5'>
 			{data.map((country: CountryData, index: number) => (
