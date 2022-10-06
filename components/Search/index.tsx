@@ -11,7 +11,7 @@ function Search() {
 
 	return (
 		<section className='m-5'>
-			<div className='flex items-center gap-2 p-4 max-w-xs rounded-md shadow-md border'>
+			<div className='flex items-center gap-2 p-4 w-full rounded-md shadow-md border sm:max-w-xs'>
 				<SearchIcon />
 				<input
 					className='outline-none w-full'
