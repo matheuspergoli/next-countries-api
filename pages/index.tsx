@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Title from '../components/Title'
 import Countries from '../components/Countries'
+import Search from '../components/Search'
 
 export async function getStaticProps() {
 	const response = await fetch('https://restcountries.com/v3.1/all')
@@ -18,6 +19,7 @@ function Home({ data }) {
 				<title>Countries API</title>
 			</Head>
 			<Title />
+			<Search />
 			<Countries data={data} />
 		</>
 	)

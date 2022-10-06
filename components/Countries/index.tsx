@@ -7,7 +7,10 @@ interface CountryData {
 	region: string
 	population: number
 	flags: { png: string }
-	name: { common: string; official: string }
+	name: {
+		common: string
+		official: string
+	}
 }
 
 function Countries({ data }) {
