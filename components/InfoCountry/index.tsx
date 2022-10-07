@@ -12,7 +12,7 @@ interface Country {
 			subregion: string
 			population: number
 			flags: { png: string }
-			name: { official: string }
+			name: { commom: string; official: string }
 		}
 	]
 }
@@ -43,7 +43,7 @@ function InfoCountry({ data }: Country) {
 					/>
 				</figure>
 				<section className='mt-10 sm:mt-0'>
-					<h1 className='mb-5 text-4xl font-bold'>{data[0].name.official}</h1>
+					<h1 className='mb-5 text-4xl font-bold'>{data[0].name.commom}</h1>
 					<p className='text-xl font-semibold'>
 						Native Name:{' '}
 						<span className='font-normal'>{data[0].name.official}</span>
