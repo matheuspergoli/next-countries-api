@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import InfoCountry from '../../components/InfoCountry'
 
 interface Context {
 	query: {
@@ -22,9 +23,7 @@ function CountryInformation({ id, data }) {
 			<Head>
 				<title>{id}</title>
 			</Head>
-			<main>
-				<h1>CountryInformation {id}</h1>
-			</main>
+			<InfoCountry data={data} />
 		</>
 	)
 }
