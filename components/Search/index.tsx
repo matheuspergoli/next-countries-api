@@ -1,12 +1,18 @@
 import React from 'react'
 import { FaSearch as SearchIcon } from 'react-icons/fa'
 import { CountryContext } from '../../context/CountryContext'
+import { RegionContext } from '../../context/RegionContext'
 
 function Search() {
 	const { country, setCountry } = React.useContext(CountryContext)
+	const { region, setRegion } = React.useContext(RegionContext)
 
 	function searchCountry({ target }) {
 		setCountry(target.value)
+	}
+
+	function sortByRegion({ target }) {
+		setRegion(target.value)
 	}
 
 	return (
@@ -22,7 +28,10 @@ function Search() {
 				/>
 			</div>
 			<form>
-				<select className='mt-5 p-4 rounded-md border shadow-md outline-none sm:mt-0'>
+				<select
+					className='mt-5 p-4 rounded-md border shadow-md outline-none sm:mt-0'
+					value={region}
+					onChange={sortByRegion}>
 					<option value='' selected disabled>
 						Filter by Region
 					</option>
