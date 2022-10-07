@@ -10,7 +10,7 @@ function Search() {
 	}
 
 	return (
-		<section className='m-5'>
+		<section className='m-5 sm:flex sm:items-center sm:justify-around'>
 			<div className='flex items-center gap-2 p-4 w-full rounded-md shadow-md border sm:max-w-xs'>
 				<SearchIcon />
 				<input
@@ -21,7 +21,18 @@ function Search() {
 					placeholder='Search for a country...'
 				/>
 			</div>
-			<div></div>
+			<div>
+				<select className='mt-5 p-4 rounded-md border shadow-md outline-none sm:mt-0'>
+					<option value='' selected disabled>
+						Filter by Region
+					</option>
+					<option value='africa'>Africa</option>
+					<option value='america'>America</option>
+					<option value='asia'>Asia</option>
+					<option value='europe'>Europe</option>
+					<option value='oceania'>Oceania</option>
+				</select>
+			</div>
 		</section>
 	)
 }
