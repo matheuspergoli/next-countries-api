@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 
 interface CountryData {
@@ -17,16 +18,20 @@ function Country({ country }: CountryData) {
 	return (
 		<section className='w-country-card h-country-card shadow-md rounded-md border'>
 			<figure>
-				<Image
-					className='rounded-t-md'
-					loader={() => src}
-					src={src}
-					alt={`${country.name.common} Flag`}
-					width={300}
-					height={200}
-					unoptimized
-					priority
-				/>
+				<Link href={`/info/${country.name.common}`}>
+					<a>
+						<Image
+							className='cursor-pointer rounded-t-md'
+							loader={() => src}
+							src={src}
+							alt={`${country.name.common} Flag`}
+							width={300}
+							height={200}
+							unoptimized
+							priority
+						/>
+					</a>
+				</Link>
 			</figure>
 			<div className='p-4'>
 				<h1 className='mb-2 font-bold text-xl'>{country.name.common}</h1>
