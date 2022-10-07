@@ -6,9 +6,8 @@ import { BsArrowLeft as Arrow } from 'react-icons/bs'
 interface Country {
 	data: [
 		{
-			tld: []
-			borders: []
-			capital: []
+			tld: [1]
+			capital: [1]
 			region: string
 			subregion: string
 			population: number
