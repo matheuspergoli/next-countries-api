@@ -21,7 +21,7 @@ function Search() {
 					placeholder='Search for a country...'
 				/>
 			</div>
-			<div>
+			<form>
 				<select className='mt-5 p-4 rounded-md border shadow-md outline-none sm:mt-0'>
 					<option value='' selected disabled>
 						Filter by Region
@@ -32,7 +32,7 @@ function Search() {
 					<option value='europe'>Europe</option>
 					<option value='oceania'>Oceania</option>
 				</select>
-			</div>
+			</form>
 		</section>
 	)
 }
