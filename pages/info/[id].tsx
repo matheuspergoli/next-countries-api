@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Title from '../../components/Title'
 import InfoCountry from '../../components/InfoCountry'
 
 interface Context {
@@ -22,7 +23,12 @@ function CountryInformation({ id, data }) {
 		<>
 			<Head>
 				<title>{id}</title>
+				<meta
+					name='description'
+					content='Next Countries API - Search for every country in our site, check information about your desired country, we provide all the information you will need.'
+				/>
 			</Head>
+			<Title />
 			<InfoCountry data={data} />
 		</>
 	)
