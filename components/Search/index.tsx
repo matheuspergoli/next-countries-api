@@ -32,7 +32,7 @@ function Search() {
 					className='mt-5 p-4 rounded-md border shadow-md outline-none sm:mt-0'
 					value={region}
 					onChange={sortByRegion}>
-					<option defaultValue={''} disabled>
+					<option value='' disabled>
 						Filter by Region
 					</option>
 					<option value='africa'>Africa</option>
